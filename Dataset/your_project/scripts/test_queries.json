@@ -1,0 +1,12 @@
+[
+  {
+    "question": "What is the primary function of the kidneys?",
+    "ground_truth": "The kidneys filter blood to remove waste products and regulate fluid and electrolyte balance.",
+    "top_k": 5
+  },
+  {
+    "question": "List common symptoms of myocardial infarction.",
+    "ground_truth": "Chest pain or discomfort, shortness of breath, nausea, sweating, and pain that may radiate to the arm, neck, or jaw.",
+    "top_k": 5
+  }
+]

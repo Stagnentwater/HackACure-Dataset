@@ -1,0 +1,28 @@
+# API
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+pydantic==2.9.2
+python-dotenv==1.0.1
+
+# LangChain + Google Gemini
+langchain==0.3.4
+langchain-community==0.3.3
+langchain-text-splitters==0.3.1
+langchain-google-genai==2.0.1
+
+# Vector store
+chromadb==0.5.11
+# hnswlib==0.8.0  # removed to avoid native build on Windows
+
+# PDF + tokenization
+PyMuPDF==1.24.10
+tiktoken==0.7.0
+
+# RAGAS (compatible with LangChain 0.3.x)
+ragas==0.2.3
+
+# Extras/util
+tenacity==8.5.0
+httpx==0.28.1
+numpy==1.26.4
+pandas==2.2.3

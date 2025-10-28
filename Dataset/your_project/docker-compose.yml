@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - GOOGLE_API_KEY=${GOOGLE_API_KEY}
+      - PDF_DIR=/app/medical_pdfs
+      - CHROMA_DIR=/app/data/chroma
+    volumes:
+      - ./medical_pdfs:/app/medical_pdfs:ro
+      - ./data/chroma:/app/data/chroma

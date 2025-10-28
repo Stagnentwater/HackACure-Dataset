@@ -1,0 +1,8 @@
+### Query example
+POST http://localhost:8000/query
+Content-Type: application/json
+
+{
+  "query": "What are the common symptoms of myocardial infarction?",
+  "top_k": 5
+}
