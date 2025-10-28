@@ -1,0 +1,36 @@
+services:
+  - type: web
+    name: medical-rag-api
+    runtime: python
+    rootDir: Dataset/your_project
+    plan: free
+    region: oregon
+    buildCommand: |
+      pip install --upgrade pip
+      pip install -r requirements.txt
+    startCommand: bash scripts/start.sh
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: GOOGLE_API_KEY
+        sync: false
+      - key: LLM_MODEL
+        value: gemini-2.5-flash
+      - key: EMBEDDING_MODEL
+        value: models/text-embedding-004
+      - key: CHUNK_SIZE
+        value: "512"
+      - key: CHUNK_OVERLAP
+        value: "100"
+      - key: EMBEDDING_BATCH_SIZE
+        value: "100"
+      - key: API_REQUEST_TIMEOUT_SECONDS
+        value: "60"
+      - key: DEFAULT_TOP_K
+        value: "5"
+      - key: MAX_TOP_K
+        value: "10"
+    disk:
+      name: chroma-store
+      mountPath: /opt/render/project/src/Dataset/your_project/data/chroma
+      sizeGB: 2
