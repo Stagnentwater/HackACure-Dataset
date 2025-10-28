@@ -14,6 +14,8 @@ services:
     envVars:
       - key: GOOGLE_API_KEY
         sync: false
+      - key: REMOTE_PDFS_ZIP_URL
+        sync: false
       - key: LLM_MODEL
         value: gemini-2.5-flash
       - key: EMBEDDING_MODEL
