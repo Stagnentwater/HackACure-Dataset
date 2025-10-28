@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# Environments
+.env
+.env.*
+.venv/
+venv/
+
+# Editors/OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Project data not to version
+Dataset/your_project/data/chroma/*
+!Dataset/your_project/data/chroma/.gitkeep
+Dataset/your_project/medical_pdfs/*
+!Dataset/your_project/medical_pdfs/.gitkeep
+
+# Large and binary artifacts
+*.sqlite3
+*.bin
+*.pickle
+*.pkl
+*.log
